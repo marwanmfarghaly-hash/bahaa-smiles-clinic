@@ -78,34 +78,34 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     // Replace these placeholders with the app's name and description when first building the app.
     // Each content route, / included, must still set its own head(). Never add og:image or
     // twitter:image here: every page without its own would inherit the root's preview image.
-    meta: [
+        meta: [
       { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" },
+      { title: "Dental Clinic - د. عمر بهاء الدين | استشاري زراعة الأسنان" },
+      { name: "description", content: "عيادة د. عمر بهاء الدين لزراعة وتجميل الأسنان - ٢٦١ ه‍ شارع الضغط - حجز مواعيد ورعاية طبية متكاملة." },
+      { name: "theme-color", content: "#0f766e" },
+      { name: "apple-mobile-web-app-capable", content: "yes" },
+      { name: "apple-mobile-web-app-status-bar-style", content: "black-translucent" },
+      { name: "apple-mobile-web-app-title", content: "Dental Clinic" },
+      { property: "og:title", content: "Dental Clinic - د. عمر بهاء الدين" },
+      { property: "og:description", content: "احجز كشفك الآن بعيادة د. عمر بهاء الدين لزراعة وتجميل الأسنان." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
+      { rel: "stylesheet", href: appCss },
+      { rel: "manifest", href: "/manifest.json" },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "apple-touch-icon", href: "/favicon.ico" },
     ],
+
   }),
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
-
-function RootShell({ children }: { children: ReactNode }) {
-  return (
+   <html lang="ar" dir="rtl">
     <html lang="en">
       <head>
         <HeadContent />
