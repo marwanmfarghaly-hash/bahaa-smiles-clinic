@@ -1,0 +1,8 @@
+# Delivery roadmap
+
+- [ ] Build the Arabic-first, bilingual clinic home page and requested services.
+- [ ] Add cloud-backed booking, two-per-hour capacity, weekly and emergency closures, and calendar confirmation.
+- [ ] Add patient profiles and a protected doctor dashboard for appointments, records, clinic details, services, and closures.
+- [ ] Add installable PWA behavior, custom icons, and the QR download page.
+- [ ] Connect push delivery and scheduled reminders, then verify their setup.
+- [ ] Verify core flows, metadata, build status, and commit the finished work.
